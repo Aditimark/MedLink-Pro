@@ -155,74 +155,81 @@ export default function Navbar() {
             </div>
 
             {/* NAV */}
-            <div className='flex-1 p-5'>
-              <nav className='space-y-2'>
-                <Link
-                  href='/'
-                  className='flex h-12 items-center px-4 text-sm font-semibold text-slate-700 transition hover:bg-slate-100'
-                >
-                  Home
-                </Link>
+<div className='flex-1 p-5'>
+  <nav className='space-y-2'>
+    <Link
+      href='/'
+      onClick={() => setMobileMenuOpen(false)}
+      className='flex h-12 items-center px-4 text-sm font-semibold text-slate-700 transition hover:bg-slate-100'
+    >
+      Home
+    </Link>
 
-                <Link
-                  href='/about'
-                  className='flex h-12 items-center px-4 text-sm font-semibold text-slate-700 transition hover:bg-slate-100'
-                >
-                  About
-                </Link>
+    <Link
+      href='/about'
+      onClick={() => setMobileMenuOpen(false)}
+      className='flex h-12 items-center px-4 text-sm font-semibold text-slate-700 transition hover:bg-slate-100'
+    >
+      About
+    </Link>
 
-                <Link
-                  href='/how-it-works'
-                  className='flex h-12 items-center px-4 text-sm font-semibold text-slate-700 transition hover:bg-slate-100'
-                >
-                  How It Works
-                </Link>
+    <Link
+      href='/how-it-works'
+      onClick={() => setMobileMenuOpen(false)}
+      className='flex h-12 items-center px-4 text-sm font-semibold text-slate-700 transition hover:bg-slate-100'
+    >
+      How It Works
+    </Link>
 
-                <Link
-                  href='/contact'
-                  className='flex h-12 items-center px-4 text-sm font-semibold text-slate-700 transition hover:bg-slate-100'
-                >
-                  Contact
-                </Link>
+    <Link
+      href='/contact'
+      onClick={() => setMobileMenuOpen(false)}
+      className='flex h-12 items-center px-4 text-sm font-semibold text-slate-700 transition hover:bg-slate-100'
+    >
+      Contact
+    </Link>
 
-                {/* AUTH */}
-                <div className='mt-6 space-y-3'>
-                  {user ? (
-                    <>
-                      <Link
-                        href='/dashboard'
-                        className='flex h-12 items-center justify-center bg-[#0284C7] text-sm font-semibold text-white'
-                      >
-                        Dashboard
-                      </Link>
+    {/* AUTH */}
+    <div className='mt-6 space-y-3'>
+      {user ? (
+        <>
+          <Link
+            href='/dashboard'
+            onClick={() => setMobileMenuOpen(false)}
+            className='flex h-12 items-center justify-center bg-[#0284C7] text-sm font-semibold text-white'
+          >
+            Dashboard
+          </Link>
 
-                      <button
-                        onClick={handleLogout}
-                        className='h-12 w-full border border-slate-300 text-sm font-semibold text-[#0F172A]'
-                      >
-                        Logout
-                      </button>
-                    </>
-                  ) : (
-                    <>
-                      <Link
-                        href='/login'
-                        className='flex h-12 items-center justify-center border border-slate-300 text-sm font-semibold text-[#0F172A]'
-                      >
-                        Sign In
-                      </Link>
+          <button
+            onClick={handleLogout}
+            className='h-12 w-full border border-slate-300 text-sm font-semibold text-[#0F172A]'
+          >
+            Logout
+          </button>
+        </>
+      ) : (
+        <>
+          <Link
+            href='/login'
+            onClick={() => setMobileMenuOpen(false)}
+            className='flex h-12 items-center justify-center border border-slate-300 text-sm font-semibold text-[#0F172A]'
+          >
+            Sign In
+          </Link>
 
-                      <Link
-                        href='/register'
-                        className='flex h-12 items-center justify-center bg-[#0284C7] text-sm font-semibold text-white'
-                      >
-                        Join Network
-                      </Link>
-                    </>
-                  )}
-                </div>
-              </nav>
-            </div>
+          <Link
+            href='/register'
+            onClick={() => setMobileMenuOpen(false)}
+            className='flex h-12 items-center justify-center bg-[#0284C7] text-sm font-semibold text-white'
+          >
+            Join Network
+          </Link>
+        </>
+      )}
+    </div>
+  </nav>
+</div>
 
             {/* FOOTER */}
             <div className='border-t border-slate-200 p-5 text-sm text-slate-500'>
