@@ -26,7 +26,7 @@ export default function Navbar() {
   }
 
   return (
-    <header className='sticky top-0 z-50 border-b border-white/10 bg-white/80 backdrop-blur-xl'>
+    <header className='sticky top-0 z-50 border-b border-slate-200 bg-white/90 backdrop-blur-xl'>
       <div className='mx-auto flex h-16 max-w-7xl items-center justify-between px-4 lg:px-6'>
         {/* LOGO */}
         <Link
@@ -59,21 +59,21 @@ export default function Navbar() {
           </Link>
 
           <Link
-            href='/how-it-works'
-            className='text-sm font-semibold text-slate-600 transition hover:text-[#0F172A]'
-          >
-            How It Works
-          </Link>
-
-          <Link
             href='/contact'
             className='text-sm font-semibold text-slate-600 transition hover:text-[#0F172A]'
           >
             Contact
           </Link>
+
+          <Link
+            href='/register'
+            className='text-sm font-semibold text-slate-600 transition hover:text-[#0F172A]'
+          >
+            Register
+          </Link>
         </nav>
 
-        {/* AUTH ACTIONS */}
+        {/* AUTH */}
         <div className='hidden items-center gap-3 lg:flex'>
           {user ? (
             <>
@@ -110,7 +110,7 @@ export default function Navbar() {
           )}
         </div>
 
-        {/* MOBILE MENU BUTTON */}
+        {/* MOBILE MENU */}
         <button
           onClick={() =>
             setMobileMenuOpen(true)
@@ -124,16 +124,14 @@ export default function Navbar() {
       {/* MOBILE DRAWER */}
       {mobileMenuOpen && (
         <>
-          {/* OVERLAY */}
           <div
             onClick={() =>
               setMobileMenuOpen(false)
             }
-            className='fixed inset-0 z-40 bg-black/40 lg:hidden'
+            className='fixed inset-0 z-40 bg-black/40'
           />
 
-          {/* DRAWER */}
-          <div className='fixed right-0 top-0 z-50 flex h-screen w-[300px] flex-col border-l border-slate-200 bg-white lg:hidden'>
+          <div className='fixed right-0 top-0 z-50 flex h-screen w-[300px] flex-col border-l border-slate-200 bg-white'>
             {/* HEADER */}
             <div className='flex h-16 items-center justify-between border-b border-slate-200 px-5'>
               <div className='flex items-center gap-3'>
@@ -155,85 +153,75 @@ export default function Navbar() {
             </div>
 
             {/* NAV */}
-<div className='flex-1 p-5'>
-  <nav className='space-y-2'>
-    <Link
-      href='/'
-      onClick={() => setMobileMenuOpen(false)}
-      className='flex h-12 items-center px-4 text-sm font-semibold text-slate-700 transition hover:bg-slate-100'
-    >
-      Home
-    </Link>
+            <div className='flex-1 p-5'>
+              <nav className='space-y-2'>
+                {[
+                  ['Home', '/'],
+                  ['About', '/about'],
+                  ['Contact', '/contact'],
+                  ['Register', '/register'],
+                ].map(([label, href]) => (
+                  <Link
+                    key={label}
+                    href={href}
+                    onClick={() =>
+                      setMobileMenuOpen(false)
+                    }
+                    className='flex h-12 items-center px-4 text-sm font-semibold text-slate-700 transition hover:bg-slate-100'
+                  >
+                    {label}
+                  </Link>
+                ))}
 
-    <Link
-      href='/about'
-      onClick={() => setMobileMenuOpen(false)}
-      className='flex h-12 items-center px-4 text-sm font-semibold text-slate-700 transition hover:bg-slate-100'
-    >
-      About
-    </Link>
+                <div className='mt-6 space-y-3'>
+                  {user ? (
+                    <>
+                      <Link
+                        href='/dashboard'
+                        onClick={() =>
+                          setMobileMenuOpen(false)
+                        }
+                        className='flex h-12 items-center justify-center bg-[#0284C7] text-sm font-semibold text-white'
+                      >
+                        Dashboard
+                      </Link>
 
-    <Link
-      href='/how-it-works'
-      onClick={() => setMobileMenuOpen(false)}
-      className='flex h-12 items-center px-4 text-sm font-semibold text-slate-700 transition hover:bg-slate-100'
-    >
-      How It Works
-    </Link>
+                      <button
+                        onClick={handleLogout}
+                        className='h-12 w-full border border-slate-300 text-sm font-semibold text-[#0F172A]'
+                      >
+                        Logout
+                      </button>
+                    </>
+                  ) : (
+                    <>
+                      <Link
+                        href='/login'
+                        onClick={() =>
+                          setMobileMenuOpen(false)
+                        }
+                        className='flex h-12 items-center justify-center border border-slate-300 text-sm font-semibold text-[#0F172A]'
+                      >
+                        Sign In
+                      </Link>
 
-    <Link
-      href='/contact'
-      onClick={() => setMobileMenuOpen(false)}
-      className='flex h-12 items-center px-4 text-sm font-semibold text-slate-700 transition hover:bg-slate-100'
-    >
-      Contact
-    </Link>
+                      <Link
+                        href='/register'
+                        onClick={() =>
+                          setMobileMenuOpen(false)
+                        }
+                        className='flex h-12 items-center justify-center bg-[#0284C7] text-sm font-semibold text-white'
+                      >
+                        Join Network
+                      </Link>
+                    </>
+                  )}
+                </div>
+              </nav>
+            </div>
 
-    {/* AUTH */}
-    <div className='mt-6 space-y-3'>
-      {user ? (
-        <>
-          <Link
-            href='/dashboard'
-            onClick={() => setMobileMenuOpen(false)}
-            className='flex h-12 items-center justify-center bg-[#0284C7] text-sm font-semibold text-white'
-          >
-            Dashboard
-          </Link>
-
-          <button
-            onClick={handleLogout}
-            className='h-12 w-full border border-slate-300 text-sm font-semibold text-[#0F172A]'
-          >
-            Logout
-          </button>
-        </>
-      ) : (
-        <>
-          <Link
-            href='/login'
-            onClick={() => setMobileMenuOpen(false)}
-            className='flex h-12 items-center justify-center border border-slate-300 text-sm font-semibold text-[#0F172A]'
-          >
-            Sign In
-          </Link>
-
-          <Link
-            href='/register'
-            onClick={() => setMobileMenuOpen(false)}
-            className='flex h-12 items-center justify-center bg-[#0284C7] text-sm font-semibold text-white'
-          >
-            Join Network
-          </Link>
-        </>
-      )}
-    </div>
-  </nav>
-</div>
-
-            {/* FOOTER */}
             <div className='border-t border-slate-200 p-5 text-sm text-slate-500'>
-              Professional Healthcare Network
+              Global Healthcare Research Network
             </div>
           </div>
         </>

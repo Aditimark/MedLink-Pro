@@ -17,12 +17,13 @@ export default function AboutPage() {
             </div>
 
             <h1 className='mt-8 text-6xl font-bold leading-[0.95] tracking-tight text-white md:text-7xl'>
-              The professional ecosystem for modern healthcare.
+              The professional ecosystem for modern healthcare research.
             </h1>
 
             <p className='mt-8 max-w-2xl text-[22px] leading-10 text-slate-300'>
               Built for physicians, researchers, universities, hospitals, and
-              institutions advancing global clinical excellence.
+              institutions advancing global clinical collaboration and medical
+              innovation.
             </p>
 
             <div className='mt-10 flex flex-wrap gap-4'>
@@ -34,7 +35,7 @@ export default function AboutPage() {
               </Link>
 
               <Link
-                href='/how-it-works'
+                href='/'
                 className='flex h-14 items-center justify-center border border-white/20 px-8 text-sm font-semibold text-white backdrop-blur-xl'
               >
                 Explore Platform
@@ -59,10 +60,10 @@ export default function AboutPage() {
       <section className='border-b border-slate-200 bg-white'>
         <div className='mx-auto grid max-w-7xl gap-px bg-slate-200 md:grid-cols-4'>
           {[
-            ['12K+', 'Healthcare Professionals'],
+            ['12K+', 'Healthcare Researchers'],
             ['450+', 'Institutions'],
             ['38+', 'Medical Specialties'],
-            ['92%', 'Verified Profiles'],
+            ['1.2K+', 'Research Publications'],
           ].map(([value, label]) => (
             <div
               key={label}
@@ -107,20 +108,20 @@ export default function AboutPage() {
             <div className='mt-10 space-y-8 text-[19px] leading-10 text-slate-600'>
               <p>
                 Healthcare professionals deserve infrastructure purpose-built
-                for medicine, research, and institutional collaboration rather
-                than generic networking platforms.
+                for medicine, research, academic publishing, and institutional
+                collaboration rather than generic networking platforms.
               </p>
 
               <p>
-                MedLink Pro enables specialists, researchers, and healthcare
-                organizations to connect through verified expertise and
-                opportunity-driven networking.
+                MedLink Pro enables researchers, specialists, universities, and
+                healthcare organizations to connect through shared knowledge,
+                collaboration, and opportunity-driven networking.
               </p>
 
               <p>
-                From peer-reviewed publications to advanced recruitment
-                workflows, the platform supports the future of healthcare
-                innovation and talent discovery.
+                From peer-reviewed publications to institutional partnerships,
+                the platform supports the future of healthcare innovation and
+                global medical research.
               </p>
             </div>
           </div>
@@ -136,26 +137,26 @@ export default function AboutPage() {
             </div>
 
             <h2 className='mt-8 text-6xl font-bold leading-[1] tracking-tight text-[#0F172A]'>
-              Clinical precision meets modern networking.
+              Research collaboration meets modern networking.
             </h2>
           </div>
 
           <div className='mt-16 grid gap-6 lg:grid-cols-3'>
             {[
               {
-                title: 'Verified Expertise',
+                title: 'Clinical Research',
                 description:
-                  'Professional identity, certifications, and institutional credibility remain core to platform trust.',
+                  'Support peer-reviewed publishing, interdisciplinary collaboration, and academic healthcare discovery.',
               },
               {
-                title: 'Research Collaboration',
+                title: 'Institutional Networking',
                 description:
-                  'Enable peer-reviewed publishing, interdisciplinary collaboration, and academic visibility.',
+                  'Connect universities, hospitals, researchers, and specialists across the healthcare ecosystem.',
               },
               {
                 title: 'Secure Infrastructure',
                 description:
-                  'Role-based architecture, protected APIs, and scalable healthcare-first SaaS infrastructure.',
+                  'Built with scalable SaaS architecture, protected APIs, and enterprise-grade healthcare systems.',
               },
             ].map((item) => (
               <div
@@ -186,12 +187,13 @@ export default function AboutPage() {
             </div>
 
             <h2 className='mt-8 text-6xl font-bold leading-[1] tracking-tight text-white'>
-              Connect with the future of healthcare.
+              Connect with the future of healthcare research.
             </h2>
 
             <p className='mt-6 text-[19px] leading-10 text-slate-300'>
-              Join verified healthcare professionals, institutions, and
-              researchers across the global medical ecosystem.
+              Join researchers, healthcare professionals, institutions, and
+              universities shaping the future of medicine and clinical
+              collaboration.
             </p>
           </div>
 

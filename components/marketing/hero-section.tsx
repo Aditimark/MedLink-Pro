@@ -16,8 +16,8 @@ export default function HeroSection() {
 
           <p className='mt-8 max-w-xl text-lg leading-8 text-slate-600'>
             A centralized ecosystem bridging the gap between elite
-            medical talent and premier institutions through verified
-            expertise and clinical data-driven matching.
+            medical talent and premier institutions through expertise
+            and clinical data-driven matching.
           </p>
 
           {/* BUTTONS */}
@@ -59,7 +59,7 @@ export default function HeroSection() {
                 </p>
 
                 <p className='mt-1 max-w-[220px] text-sm leading-6 text-slate-500'>
-                  Placement rate for verified medical professionals.
+                    Placement rate for medical professionals.
                 </p>
               </div>
             </div>

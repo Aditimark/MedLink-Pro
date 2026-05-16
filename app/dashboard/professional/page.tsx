@@ -222,7 +222,7 @@ export default async function ProfessionalDashboardPage() {
 
               <div className='mt-6 space-y-5'>
                 {[
-                  'Clinical Experience Verified',
+                  'Clinical Experience Documented',
                   'Board Certifications Linked',
                   'Research Publications Added',
                 ].map((item) => (

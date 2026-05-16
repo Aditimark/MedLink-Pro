@@ -13,12 +13,13 @@ export default function ContactPage() {
             </div>
 
             <h1 className='mt-8 text-6xl font-bold leading-[0.95] tracking-tight text-[#0F172A] md:text-7xl'>
-              Let’s build the future of healthcare networking.
+              Advancing healthcare research through collaboration.
             </h1>
 
             <p className='mt-8 max-w-2xl text-[22px] leading-10 text-slate-600'>
-              Reach out for institutional partnerships, healthcare recruitment,
-              product support, or platform collaboration opportunities.
+              Reach out for institutional partnerships, research initiatives,
+              healthcare collaboration, platform support, and academic
+              networking opportunities.
             </p>
           </div>
 
@@ -44,13 +45,18 @@ export default function ContactPage() {
               Send us a message
             </h2>
 
+            <p className='mt-4 max-w-2xl text-[17px] leading-8 text-slate-500'>
+              Connect with our team regarding partnerships, healthcare research
+              collaboration, institutional onboarding, or platform support.
+            </p>
+
             <div className='mt-10 grid gap-6 md:grid-cols-2'>
               <div>
                 <label className='text-xs font-semibold uppercase tracking-[0.2em] text-slate-500'>
                   First Name
                 </label>
 
-                <input className='mt-3 h-14 w-full border border-slate-200 px-4 outline-none' />
+                <input className='mt-3 h-14 w-full border border-slate-200 px-4 outline-none transition focus:border-[#0284C7]' />
               </div>
 
               <div>
@@ -58,7 +64,7 @@ export default function ContactPage() {
                   Last Name
                 </label>
 
-                <input className='mt-3 h-14 w-full border border-slate-200 px-4 outline-none' />
+                <input className='mt-3 h-14 w-full border border-slate-200 px-4 outline-none transition focus:border-[#0284C7]' />
               </div>
 
               <div className='md:col-span-2'>
@@ -66,15 +72,15 @@ export default function ContactPage() {
                   Email Address
                 </label>
 
-                <input className='mt-3 h-14 w-full border border-slate-200 px-4 outline-none' />
+                <input className='mt-3 h-14 w-full border border-slate-200 px-4 outline-none transition focus:border-[#0284C7]' />
               </div>
 
               <div className='md:col-span-2'>
                 <label className='text-xs font-semibold uppercase tracking-[0.2em] text-slate-500'>
-                  Organization
+                  Institution / Organization
                 </label>
 
-                <input className='mt-3 h-14 w-full border border-slate-200 px-4 outline-none' />
+                <input className='mt-3 h-14 w-full border border-slate-200 px-4 outline-none transition focus:border-[#0284C7]' />
               </div>
 
               <div className='md:col-span-2'>
@@ -84,12 +90,12 @@ export default function ContactPage() {
 
                 <textarea
                   rows={8}
-                  className='mt-3 w-full border border-slate-200 p-4 outline-none'
+                  className='mt-3 w-full border border-slate-200 p-4 outline-none transition focus:border-[#0284C7]'
                 />
               </div>
             </div>
 
-            <button className='mt-8 flex h-14 items-center justify-center bg-[#0284C7] px-8 text-sm font-semibold text-white'>
+            <button className='mt-8 flex h-14 items-center justify-center bg-[#0284C7] px-8 text-sm font-semibold text-white transition hover:bg-[#0369A1]'>
               Submit Inquiry
             </button>
           </div>
@@ -98,16 +104,16 @@ export default function ContactPage() {
           <div className='space-y-6'>
             {[
               {
-                title: 'General Support',
+                title: 'Platform Support',
                 value: 'support@medlinkpro.com',
               },
               {
-                title: 'Institution Partnerships',
-                value: 'partners@medlinkpro.com',
+                title: 'Research Partnerships',
+                value: 'research@medlinkpro.com',
               },
               {
-                title: 'Healthcare Recruitment',
-                value: 'recruitment@medlinkpro.com',
+                title: 'Institution Collaboration',
+                value: 'institutions@medlinkpro.com',
               },
             ].map((item) => (
               <div
@@ -118,24 +124,26 @@ export default function ContactPage() {
                   {item.title}
                 </p>
 
-                <h3 className='mt-5 text-2xl font-bold text-[#0F172A]'>
+                <h3 className='mt-5 text-2xl font-bold break-all text-[#0F172A]'>
                   {item.value}
                 </h3>
               </div>
             ))}
 
+            {/* DARK CARD */}
             <div className='border border-slate-200 bg-[#0F172A] p-8'>
               <div className='inline-flex bg-white/10 px-4 py-2 text-xs font-semibold uppercase tracking-[0.2em] text-sky-300'>
-                Enterprise Network
+                Global Research Ecosystem
               </div>
 
               <h3 className='mt-8 text-4xl font-bold leading-tight text-white'>
-                Supporting the global healthcare ecosystem.
+                Supporting healthcare innovation worldwide.
               </h3>
 
               <p className='mt-6 text-[17px] leading-9 text-slate-300'>
-                Designed for physicians, researchers, institutions, and medical
-                organizations worldwide.
+                Designed for researchers, healthcare professionals,
+                universities, hospitals, and institutions driving the future of
+                medicine.
               </p>
             </div>
           </div>
